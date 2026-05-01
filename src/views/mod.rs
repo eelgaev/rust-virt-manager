@@ -1,0 +1,13 @@
+pub mod add_hardware;
+pub mod clone_vm;
+pub mod conn_details;
+pub mod create_network;
+pub mod create_pool;
+pub mod create_vm;
+pub mod create_volume;
+pub mod details;
+pub mod device_editors;
+pub mod manager;
+// pub mod snapshots;
+pub mod vm_window;
+pub mod volume_browser;
