@@ -17,8 +17,12 @@ pub struct AppConfig {
 impl Default for AppConfig {
     fn default() -> Self {
         Self {
-            saved_uris: vec!["qemu:///system".to_string()],
-            auto_connect: true,
+            saved_uris: if cfg!(target_os = "linux") {
+                vec!["qemu:///system".to_string()]
+            } else {
+                vec![]
+            },
+            auto_connect: false,
             stats_update_interval_secs: 2,
             show_guest_cpu: true,
             show_host_cpu: false,
